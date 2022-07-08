@@ -1,3 +1,7 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,226 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcome__logo {
+  /* margin:10rem; */
+  margin-top: 30%;
+  width: 90%;
+  height: 90%;
+}
+
+
+.welcome__div {
+
+  /* align-content: center; */
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 5rem;
+  margin-top: 30%;
+  width: auto;
+}
+
+.waitingroom {
+  margin: 10rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.waitingroom__span {
+  margin: 0 2rem;
+  font-size: 5rem;
+  align-self: right;
+}
+
+.waitingroom__areyouready {
+  /* position:absolute; */
+  margin: 3rem 2rem;
+  width:80%;
+}
+
+.waiting__go {
+  position: absolute;
+  right:1rem;
+  bottom: 1rem;
+  margin:0 2rem;
+  width:15%;
+  float:right;
+}
+
+.waitingroom__countdown--div {
+  background-color: black;
+  color:white;
+  font-size: 3rem;
+  margin:0 2rem;
+  padding: 3rem;
+}
+
+.numberBar1 {
+  background-color: aquamarine;
+}
+
+.span-number {
+  margin:0.2rem;
+}
+
+.numberBar__list {
+  border-color: black;
+  color: wheat;
+}
+
+/* .numberBar__span {
+  margin: 0.2rem;
+} */
+
+
+.quiet {
+  background-color: transparent;
+  height:2rem;
+}
+
+.noise {
+  background-color: transparent;
+  height:2rem;
+  color:black;
+  animation: zoom-down 1s ease infinite;
+}
+
+
+@keyframes zoom-down {
+  /* from {top:200px} */
+  0% {
+    
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(20, 20);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+
+.square--5 {
+  display: grid;
+  grid-template-columns: 5rem 5rem 5rem 5rem 5rem;
+  grid-template-rows: 5rem;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  grid-template-areas:
+  " B  I  N  G  O";
+  /* justify-items: center; */
+  /* align-items: center; */
+  /* place-items: center;
+  justify-content: center;
+  align-content: center; */
+}
+
+.square--25 {
+  display: grid;
+  grid-template-columns: 5rem 5rem 5rem 5rem 5rem;
+  grid-template-rows: 5rem 5rem 5rem 5rem 5rem;
+  column-gap: 1rem;
+  row-gap: 1rem;
+
+  grid-template-areas:
+  "0 5 10 15 20"
+  "1 6 11 16 21"
+  "2 7 12 17 22"
+  "3 8 13 18 23"
+  "4 9 14 19 24";
+  
+}
+.board {
+  position: relative;
+}
+
+.grid-item5 {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.grid-item25 {
+  /* background-color: lightpink; */
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  background: #FFB6C1;
+  font-size: 3rem;
+  /* transition: background-color 0.1s ease-out 100ms */
+}
+
+.grid-item25:hover {
+  /* background-size: 100% var(--bg-h); */
+  background-position-x: left;
+  background-color: #FF1493;
+}
+
+.img--25 {
+  position: absolute;
+  width: 38px;
+  height: auto;
+  opacity: 0.6;
+
+}
+
+.Game--on {
+  text-align: center;
+}
+
+.game__greeting {
+  font-size: 3rem;
+}
+
+.callnumber__bar {
+  display: flex;
+  flex-wrap:nowrap;
+  overflow-x: scroll;
+  background-color: black;
+  height: 3rem;
+  font-size: 1.5rem;
+  color:white;
+  align-content: center;
+  height: auto;
+}
+
+.numList {
+  margin:0 0.3rem;
+}
+
+
+.board {
+  text-align: center;
+  width: auto;
+  margin:0 5rem;
+  margin-bottom: 5rem;
+  left:0%
+}
+
+.Game--btn {
+  height: auto;
+  margin-top: 0.5rem;
+  width: 15rem;
+
+}
+
+.Game--info {
+  height: 5rem;
+  margin: 5rem;
+  background-color: green;
+}
+
+.win__img {
+  margin-top: 0%;
+  width: 90%;
+  height: 90%;
 }

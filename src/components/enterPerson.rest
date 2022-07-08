@@ -1,0 +1,9 @@
+Post https://localhost:7224/api/Game 
+content-type:application/json
+
+{
+    "Id":null,
+    "Name":"Salmon",
+    "Ticket":null,
+    "Status":"Not-Ready"
+}

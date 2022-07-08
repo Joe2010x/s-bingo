@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import React, { useRef, useState } from 'react';
 import './App.css';
+import LogIn from './components/LogIn';
+import WaitingRoom from './components/WaitingRoom';
 
 function App() {
+  const nameInput = useRef();
+  const [isLogedIn, setLogIn] = useState(false);
+  const [person,setPerson] = useState('')
+  const logInKeyDown =(event)=>{
+    console.log(event.key);
+    if (event.key === "Enter")
+    {
+      // console.log(nameInput.current.value);
+      setLogIn(true);
+      setPerson('~'+nameInput.current.value);
+    }
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {(isLogedIn)
+        ? <WaitingRoom 
+          person={person}/>
+        : <LogIn
+          inputValue ={nameInput} 
+          logInKeyDown={logInKeyDown}/>}
+    
     </div>
   );
 }
