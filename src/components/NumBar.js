@@ -32,20 +32,21 @@ const NumBar = ({inputArray, checkWin}) =>{
     }
 
     let timeOut = useInterval(() => {
+      if (counter < 25)  {
       setCounter(counter + 1);
       setNumList(prev=>prev.concat(' '+ipArray[counter].toString()))
       display(ipArray[counter].toString())
-        if (counter >= 25) clearTimeout (timeOut);
+        if (counter >= 25) clearTimeout (timeOut);}
     }, 3000);
 
  
     
     return (
         <div>
-            <div id='numbar' className='callnumber__bar'>{numList && numList.map(item => <span key = {`numList${item}`} className='numList'>{item}</span>)}</div>
-            
+            {(counter<25) && <div id='numbar' className='callnumber__bar'>{numList && numList.map(item => <span key = {`numList${item}`} className='numList'>{item}</span>)}</div>
+            }
             {/* {displayNumber && <DisplayBox number={displayNumber}/>} */}
-            <div id='jumpnum' className={`${displayBox[0]} callnumber--jump`}>{displayBox[1]}</div>
+            {(counter<25) &&<div id='jumpnum' className={`${displayBox[0]} callnumber--jump`}>{displayBox[1]}</div>}
         </div>
     )
 }

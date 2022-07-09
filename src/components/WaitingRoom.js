@@ -6,12 +6,12 @@ import Game from './Game';
 
 const WaitingRoom = ({ person }) => {
     const [showtime, setShowtime] = useState(false);
-    const [timer, setTimer] = useState(9)
+    const [timer, setTimer] = useState(5)
     const [showGame, setShowGame] = useState(false);
 
     const handleClick = () => {
         setShowtime(true);
-        let count = 2;
+        let count = 5;
         let timerOut = setInterval(() => {
             setTimer(prev => prev - 1);
             count--;
