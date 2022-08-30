@@ -11,7 +11,6 @@ function App() {
     console.log(event.key);
     if (event.key === "Enter")
     {
-      // console.log(nameInput.current.value);
       setLogIn(true);
       setPerson('~'+nameInput.current.value);
     }
